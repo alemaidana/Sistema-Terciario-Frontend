@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { alumnosPanel } from 'src/app/mocks/panelData.mock';
 import { cardData } from 'src/app/models/cardData.interface';
 
 @Component({
@@ -8,13 +9,5 @@ import { cardData } from 'src/app/models/cardData.interface';
 })
 export class HomeComponent {
 
-  cardData:cardData[] = [
-    {title: 'Examenes', icon: 'bi bi-person-fill'},
-    {title: 'Asistencias', icon: 'bi bi-journal-check'},
-    {title: 'Blog', icon: 'bi bi-pencil-square'},
-    {title: 'Biblioteca', icon: 'bi bi-book'},
-    {title: 'Desafios', icon: 'bi bi-controller'},
-    {title: 'Documentacion', icon: 'bi bi-file-earmark-spreadsheet-fill'},
-    {title: 'Documentacion', icon: 'bi bi-file-earmark-spreadsheet-fill'},
-  ]
+  homeData: cardData[] = alumnosPanel;
 }

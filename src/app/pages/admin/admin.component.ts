@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { adminPanel } from 'src/app/mocks/panelData.mock';
+import { cardData } from 'src/app/models/cardData.interface';
 
 @Component({
   selector: 'app-admin',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AdminComponent {
 
+  panelData: cardData[] = adminPanel;
 }

@@ -1,1 +1,11 @@
-<h1>Admin</h1>
+<div class="container">
+
+    <h1 class="text-center mb-5">Admin</h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <app-single-link-card *ngFor="let item of panelData" [title]="item.title" [icon]="item.icon"></app-single-link-card>
+
+    </div>
+
+</div>

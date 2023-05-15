@@ -9,6 +9,7 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { AlumnosComponent } from './pages/alumnos/alumnos.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { SingleLinkCardComponent } from './components/single-link-card/single-link-card.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SingleLinkCardComponent } from './components/single-link-card/single-li
     AdminComponent,
     AlumnosComponent,
     PageNotFoundComponent,
-    SingleLinkCardComponent
+    SingleLinkCardComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
