@@ -20,12 +20,7 @@ export class AlumnosService {
 
   getAlumnos():Observable<Alumno[]>
   {
-
-    const token = localStorage.getItem('token');
-
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-
-    return this.http.get<Alumno[]>(`${this.myAppUrl}${this.myApiUrl}`, { headers: headers });
+     return this.http.get<Alumno[]>(`${this.myAppUrl}${this.myApiUrl}`);
   }
 
 }

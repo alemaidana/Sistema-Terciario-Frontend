@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 //** Components **/
 import { AppComponent } from './app.component';
@@ -16,6 +16,7 @@ import { SingleLinkCardComponent } from './components/single-link-card/single-li
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SingleUserProfileComponent } from './components/single-user-profile/single-user-profile.component';
 import { AlumnoDetailComponent } from './pages/alumno-detail/alumno-detail.component';
+import { AddTokenInterceptor } from './utils/add-token.interceptor';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { AlumnoDetailComponent } from './pages/alumno-detail/alumno-detail.compo
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: AddTokenInterceptor, multi: true } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

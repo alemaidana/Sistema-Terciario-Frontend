@@ -12,6 +12,10 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { AlumnosComponent } from './pages/alumnos/alumnos.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AlumnoDetailComponent } from './pages/alumno-detail/alumno-detail.component';
+/**
+ * Guards
+ */
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -21,16 +25,16 @@ const routes: Routes = [
     path: 'login', component: LogInComponent
   },
   {
-    path: 'home', component: HomeComponent
+    path: 'home', component: HomeComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'admin', component: AdminComponent
+    path: 'admin', component: AdminComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'alumnos', component: AlumnosComponent
+    path: 'alumnos', component: AlumnosComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'alumnos/:id', component: AlumnoDetailComponent
+    path: 'alumnos/:id', component: AlumnoDetailComponent, canActivate: [AuthGuard]
   },
   {
     path: '**', component: PageNotFoundComponent
