@@ -9,5 +9,6 @@ export class SingleLinkCardComponent {
 
   @Input() title:string = '';
   @Input() icon:string = '';
+  @Input() link:string = '';
 
 }

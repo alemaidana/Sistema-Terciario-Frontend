@@ -11,10 +11,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { AlumnosComponent } from './pages/alumnos/alumnos.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { AlumnoDetailComponent } from './pages/alumno-detail/alumno-detail.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'home', pathMatch: 'full'
+    path: '', redirectTo: 'login', pathMatch: 'full'
   },
   {
     path: 'login', component: LogInComponent
@@ -27,6 +28,9 @@ const routes: Routes = [
   },
   {
     path: 'alumnos', component: AlumnosComponent
+  },
+  {
+    path: 'alumnos/:id', component: AlumnoDetailComponent
   },
   {
     path: '**', component: PageNotFoundComponent

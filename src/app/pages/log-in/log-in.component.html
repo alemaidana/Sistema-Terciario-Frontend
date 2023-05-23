@@ -1,24 +1,25 @@
 <div class="login-form w-100">
   <div class="form-signin w-100 m-auto text-center">
-    <form>
+    <form [formGroup]="formGroup"> 
       <img class="mb-4" src="../../../assets/images/user.png" alt="" width="250" height="250">
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <h1 class="h3 mb-3 fw-normal">Ingrese</h1>
 
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
+      <div class="form-floating mb-3">
+        <input type="text" formControlName="username" class="form-control rounded" id="floatingInput" placeholder="Username">
+        <label for="floatingInput">Usuario</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <input type="password" formControlName="password" class="form-control rounded" id="floatingPassword" placeholder="Password">
         <label for="floatingPassword">Password</label>
       </div>
 
       <div class="checkbox mb-3">
         <label>
-          <input type="checkbox" value="remember-me"> Remember me
+          <input type="checkbox" value="remember-me"> Recuerdame
         </label>
       </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <button class="w-100 btn btn-lg btn-primary rounded"
+      [disabled]="!formGroup.valid" type="submit" (click)="logIn()">Ingresar</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2023 Hyppo Software</p>
     </form>
   </div>

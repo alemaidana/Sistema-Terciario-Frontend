@@ -1,7 +1,11 @@
+//** Modules **/
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+//** Components **/
 import { AppComponent } from './app.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -10,6 +14,8 @@ import { AlumnosComponent } from './pages/alumnos/alumnos.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { SingleLinkCardComponent } from './components/single-link-card/single-link-card.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { SingleUserProfileComponent } from './components/single-user-profile/single-user-profile.component';
+import { AlumnoDetailComponent } from './pages/alumno-detail/alumno-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +26,15 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     AlumnosComponent,
     PageNotFoundComponent,
     SingleLinkCardComponent,
-    NavBarComponent
+    NavBarComponent,
+    SingleUserProfileComponent,
+    AlumnoDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

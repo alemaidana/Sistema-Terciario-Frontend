@@ -6,5 +6,6 @@
 
 export interface cardData {
   title:string,
-  icon:string
+  icon:string,
+  link:string
 }

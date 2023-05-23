@@ -4,7 +4,11 @@
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
-      <app-single-link-card *ngFor="let item of panelData" [title]="item.title" [icon]="item.icon"></app-single-link-card>
+      <app-single-link-card *ngFor="let item of panelData" 
+      [title]="item.title" 
+      [icon]="item.icon"
+      [link]="item.link"
+      ></app-single-link-card>
 
     </div>
 
