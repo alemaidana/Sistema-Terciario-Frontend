@@ -1,21 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AlumnosData } from 'src/app/mocks/alumnosData.mock';
 import { Alumno } from 'src/app/models/data.interface';
+import { AlumnosService } from 'src/app/services/alumnos.service';
 
 @Component({
   selector: 'app-alumno-detail',
   templateUrl: './alumno-detail.component.html',
   styleUrls: ['./alumno-detail.component.css']
 })
-export class AlumnoDetailComponent {
+export class AlumnoDetailComponent implements OnInit{
   
-  id:string | null;
-  alumno:Alumno[];
+  id:number;
+  alumno?:Alumno;
 
-  constructor(private route:ActivatedRoute){
-    this.id = this.route.snapshot.paramMap.get('id');//this how i get the id
-    this.alumno = AlumnosData.filter( (alumno) => alumno.id == <unknown>this.id );
-    console.log(this.alumno);
+  constructor(
+    private _alumnoService:AlumnosService,
+    private activatedRoute:ActivatedRoute )
+  {
+    this.id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+  }
+  
+  ngOnInit(): void {
+  this.getAlumno(this.id);
+  }
+
+  getAlumno(id:number)
+  {
+    this._alumnoService.getAlumno(id).subscribe({
+      next: (alumno:Alumno) => { 
+      this.alumno = alumno;},
+      error: (error:Error) => {console.log(error);}
+    })
   }
 }

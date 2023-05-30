@@ -17,6 +17,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SingleUserProfileComponent } from './components/single-user-profile/single-user-profile.component';
 import { AlumnoDetailComponent } from './pages/alumno-detail/alumno-detail.component';
 import { AddTokenInterceptor } from './utils/add-token.interceptor';
+import { AlumnoAddAndEditComponent } from './pages/alumno-add-and-edit/alumno-add-and-edit.component';
+import { FormAlumnoAddAndEditComponent } from './components/form-alumno-add-and-edit/form-alumno-add-and-edit.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { AddTokenInterceptor } from './utils/add-token.interceptor';
     SingleLinkCardComponent,
     NavBarComponent,
     SingleUserProfileComponent,
-    AlumnoDetailComponent
+    AlumnoDetailComponent,
+    AlumnoAddAndEditComponent,
+    FormAlumnoAddAndEditComponent
   ],
   imports: [
     BrowserModule,

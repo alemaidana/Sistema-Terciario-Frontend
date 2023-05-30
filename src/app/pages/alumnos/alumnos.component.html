@@ -4,7 +4,7 @@
 <ng-container *ngIf="alumnos;else noAlumnos">
   
   <div class="float-right mb-3">
-    <button type="button" class="btn btn-success btn-md rounded mx-2">
+    <button type="button" class="btn btn-success btn-md rounded mx-2" routerLink="add">
       <i class="bi bi-database-fill-add"><span class="p-2">Agregar</span></i>
     </button>
   </div>
@@ -45,10 +45,10 @@
         </td>
         <td>Regular</td>
         <td>
-          <button type="button" class="btn btn-warning btn-sm rounded mx-2">
+          <button type="button" [routerLink]="['edit', alumno.id]" class="btn btn-warning btn-sm rounded mx-2">
             <i class="bi bi-pencil"></i>
           </button>
-          <button type="button" class="btn btn-danger btn-sm rounded">
+          <button type="button" (click)="deleteAlumno(alumno.id!)" class="btn btn-danger btn-sm rounded">
             <i class="bi bi-trash"></i>
           </button>
         </td>

@@ -16,6 +16,7 @@ import { AlumnoDetailComponent } from './pages/alumno-detail/alumno-detail.compo
  * Guards
  */
 import { AuthGuard } from './guards/auth.guard';
+import { AlumnoAddAndEditComponent } from './pages/alumno-add-and-edit/alumno-add-and-edit.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,12 @@ const routes: Routes = [
   },
   {
     path: 'alumnos/:id', component: AlumnoDetailComponent, canActivate: [AuthGuard]
+  },
+  {
+    path: 'alumnos/add', component: AlumnoAddAndEditComponent, canActivate: [AuthGuard]
+  },
+  {
+    path: 'alumnos/edit/:id', component: AlumnoAddAndEditComponent, canActivate: [AuthGuard]
   },
   {
     path: '**', component: PageNotFoundComponent

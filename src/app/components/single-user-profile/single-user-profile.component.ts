@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Alumno } from 'src/app/models/data.interface';
 
 @Component({
   selector: 'app-single-user-profile',
@@ -7,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class SingleUserProfileComponent {
 
-  
+  @Input() alumno?:Alumno;
 
 }

@@ -13,7 +13,7 @@
                     alt="User-Profile-Image"
                   />
                 </div>
-                <h6 class="f-w-600">Alumno nombre y apellido</h6>
+                <h6 class="f-w-600">{{ alumno?.nombre }} {{ alumno?.apellido }} </h6>
                 <h6>Regular</h6>
                 <i
                   class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"
@@ -28,23 +28,23 @@
                   
                   <div class="col-sm-6">
                     <p class="m-b-10 f-w-600">Nombre</p>
-                    <h6 class="text-muted f-w-400">Alumno nombre</h6>
+                    <h6 class="text-muted f-w-400">{{ alumno?.nombre }}</h6>
                   </div>
                   <div class="col-sm-6">
                     <p class="m-b-10 f-w-600">Apellido</p>
-                    <h6 class="text-muted f-w-400">Alumno apellido</h6>
+                    <h6 class="text-muted f-w-400">{{ alumno?.apellido }}</h6>
                   </div>
                   <div class="col-sm-6">
                     <p class="m-b-10 f-w-600">Telefono</p>
-                    <h6 class="text-muted f-w-400">Alumno telefono</h6>
+                    <h6 class="text-muted f-w-400">{{ alumno?.telefono }}</h6>
                   </div>
                   <div class="col-sm-6">
                     <p class="m-b-10 f-w-600">Email</p>
-                    <h6 class="text-muted f-w-400">Alumno email</h6>
+                    <h6 class="text-muted f-w-400">{{ alumno?.email }}</h6>
                   </div>
                   <div class="col-sm-6">
                     <p class="m-b-10 f-w-600">Carrera</p>
-                    <h6 class="text-muted f-w-400">Tec. Sup. Desarrollo de Software</h6>
+                    <h6 class="text-muted f-w-400">{{ alumno?.carreraId }}</h6>
                   </div>
                   <div class="col-sm-6">
                     <p class="m-b-10 f-w-600">Año</p>

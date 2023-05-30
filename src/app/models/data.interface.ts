@@ -1,14 +1,12 @@
-/**
- * -Data interface:
- * These interfaces give us s a blueprint that 
- * contains properties from the Database
- */
-
 export interface Alumno{
-    id:number,
+    id?:number,
     nombre:string,
     apellido:string,
+    legajo:string,
+    dni:string,
     email:string,
     telefono:string,
-    password?:string
+    password:string,
+    estado:boolean,
+    carreraId:number
 }

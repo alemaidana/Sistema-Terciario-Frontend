@@ -19,10 +19,18 @@ export class AlumnosComponent implements OnInit {
 
   getAlumnos()
   {
-    this._alumnosService.getAlumnos().subscribe({
+    this._alumnosService.getAllAlumnos().subscribe({
       next: (alumnos:Alumno[]) => {this.alumnos = alumnos},
-      error: (error:Error) => {console.log(`An error just happened ${error}`);}
+      error: (error:Error) => {console.log(`An error just happened ${error.message}`);}
     });
+  }
+
+  deleteAlumno(id:number)
+  {
+    this._alumnosService.deleteAlumno(id).subscribe({
+      next: () => { console.log('alumno eliminado')},
+      error: (error:Error) => {console.log(`An error just happened ${error.message}`);}
+    })
   }
 
 }

@@ -19,8 +19,7 @@ export class LogInComponent {
     private formBuilder:FormBuilder,
     private _userService:UserService,
     private _errorService:ErrorService,
-    private router:Router
-  )
+    private router:Router)
   {
     this.formGroup = this.formBuilder.group({
       username: ['', Validators.required],
@@ -38,7 +37,7 @@ export class LogInComponent {
     this._userService.login(user).subscribe({
       next: (token:string) => {
         localStorage.setItem('token', token);
-        this.router.navigate(['/home']);},
+        this.router.navigate(['/admin']);},
       error: (event:HttpErrorResponse) => {
          this._errorService.errorMessage(event);
       }

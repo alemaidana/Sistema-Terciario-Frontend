@@ -18,9 +18,29 @@ export class AlumnosService {
     this.myApiUrl = 'api/alumnos/';
   }
 
-  getAlumnos():Observable<Alumno[]>
+  getAllAlumnos():Observable<Alumno[]>
   {
      return this.http.get<Alumno[]>(`${this.myAppUrl}${this.myApiUrl}`);
+  }
+
+  getAlumno(id:number):Observable<Alumno>
+  {
+    return this.http.get<Alumno>(`${this.myAppUrl}${this.myApiUrl}${id}`);
+  }
+
+  createAlumno(alumno:Alumno):Observable<void>
+  {
+    return this.http.post<void>(`${this.myAppUrl}${this.myApiUrl}`, alumno);
+  }
+
+  updateAlumno(id:number, alumno:Alumno):Observable<void>
+  {
+    return this.http.put<void>(`${this.myAppUrl}${this.myApiUrl}${id}`, alumno);
+  }
+
+  deleteAlumno(id:number):Observable<void>
+  {
+    return this.http.delete<void>(`${this.myAppUrl}${this.myApiUrl}${id}`);
   }
 
 }
