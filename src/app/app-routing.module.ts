@@ -38,7 +38,7 @@ const routes: Routes = [
     path: 'alumnos/:id', component: AlumnoDetailComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'alumnos/add', component: AlumnoAddAndEditComponent, canActivate: [AuthGuard]
+    path: 'alumnos/create/new', component: AlumnoAddAndEditComponent, canActivate: [AuthGuard]
   },
   {
     path: 'alumnos/edit/:id', component: AlumnoAddAndEditComponent, canActivate: [AuthGuard]
