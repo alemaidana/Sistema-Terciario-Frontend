@@ -1,72 +1,79 @@
-<div class="page-content page-container" id="page-content">
-  <div class="padding">
-    <div class="row container d-flex justify-content-center">
-      <div class="col-xl-6 col-md-12">
-        <div class="card user-card-full">
-          <div class="row m-l-0 m-r-0">
-            <div class="col-sm-4 bg-c-lite-green user-profile">
-              <div class="card-block text-center text-white">
-                <div class="m-b-15">
-                  <img
-                    src="https://img.icons8.com/bubbles/100/000000/user.png"
-                    class="img-radius"
-                    alt="User-Profile-Image"
-                  />
+<section class="h-100 gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-9 col-xl-7">
+        <div class="card">
+          <div
+            class="rounded-top text-white d-flex flex-row"
+            style="background-color: #593196; height: 200px"
+          >
+            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                alt="Generic placeholder image"
+                class="img-fluid img-thumbnail mt-4 mb-2 rounded"
+                style="width: 150px; z-index: 1"
+              />
+            </div>
+            <div class="ms-3" style="margin-top: 130px">
+              <h5>Alumno Nombre</h5>
+              <p>Alumno Carrera</p>
+            </div>
+          </div>
+
+          <div class="card-body p-4 text-black">
+            <div class="mb-5">
+              <div class="p-4" style="background-color: #f8f9fa">
+                <div class="row g-2">
+                  <div class="col mb-2">
+                    <h4 class="font-italic mb-1">Nombre</h4>
+                    <h5 class="font-italic mb-1">{{ alumno?.nombre }}</h5>
+                  </div>
+                  <div class="col mb-2">
+                    <h4 class="font-italic mb-1">Apellido</h4>
+                    <h5 class="font-italic mb-1">{{ alumno?.apellido }}</h5>
+                  </div>
+                  <div class="col mb-2">
+                    <h4 class="font-italic mb-1">Legajo</h4>
+                    <h5 class="font-italic mb-1">{{ alumno?.legajo }}</h5>
+                  </div>
                 </div>
-                <h6 class="f-w-600">{{ alumno?.nombre }} {{ alumno?.apellido }} </h6>
-                <h6>Regular</h6>
-                <i
-                  class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"
-                ></i>
+
+                <div class="row g-2 mt-2">
+                  <div class="col mb-2">
+                    <h4 class="font-italic mb-1">Dni</h4>
+                    <h5 class="font-italic mb-1">{{ alumno?.dni }}</h5>
+                  </div>
+                  <div class="col mb-2">
+                    <h4 class="font-italic mb-1">Email</h4>
+                    <h5 class="font-italic mb-1">{{ alumno?.email }}</h5>
+                  </div>
+                </div>
+
+                <div class="row g-2 mt-2">
+                  <div class="col mb-2">
+                    <h4 class="font-italic mb-1">Telefono</h4>
+                    <h5 class="font-italic mb-1">{{ alumno?.telefono }}</h5>
+                  </div>
+                  <div class="col mb-2">
+                    <h4 class="font-italic mb-1">Estado</h4>
+                    <h5 class="font-italic mb-1">{{ alumno?.estado }}</h5>
+                  </div>
+                </div>
+
+                <div class="row g-2 mt-2">
+                  <div class="col mb-2">
+                    <h4 class="font-italic mb-1">Carrera</h4>
+                    <h5 class="font-italic mb-1">{{ alumno?.carreraId }}</h5>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="col-sm-8">
-              <div class="card-block">
-                <h4 class="m-b-20 p-b-5 b-b-default f-w-600">Datos Personales</h4>
-                <div class="row">
-                  
-                  <div class="col-sm-6">
-                    <p class="m-b-10 f-w-600">Nombre</p>
-                    <h6 class="text-muted f-w-400">{{ alumno?.nombre }}</h6>
-                  </div>
-                  <div class="col-sm-6">
-                    <p class="m-b-10 f-w-600">Apellido</p>
-                    <h6 class="text-muted f-w-400">{{ alumno?.apellido }}</h6>
-                  </div>
-                  <div class="col-sm-6">
-                    <p class="m-b-10 f-w-600">Telefono</p>
-                    <h6 class="text-muted f-w-400">{{ alumno?.telefono }}</h6>
-                  </div>
-                  <div class="col-sm-6">
-                    <p class="m-b-10 f-w-600">Email</p>
-                    <h6 class="text-muted f-w-400">{{ alumno?.email }}</h6>
-                  </div>
-                  <div class="col-sm-6">
-                    <p class="m-b-10 f-w-600">Carrera</p>
-                    <h6 class="text-muted f-w-400">{{ alumno?.carreraId }}</h6>
-                  </div>
-                  <div class="col-sm-6">
-                    <p class="m-b-10 f-w-600">Año</p>
-                    <h6 class="text-muted f-w-400">3</h6>
-                  </div>
-                  
-                  
-                </div>
-              </div>
-            </div>
-
-
           </div>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="mx-4">
-    <button type="button" class="btn btn-secondary btn-md rounded" routerLink="/alumnos">
-      Volver
-    </button>
-  </div>
 
-</div>
