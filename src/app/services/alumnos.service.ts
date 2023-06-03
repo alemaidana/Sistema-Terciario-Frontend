@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Alumno } from '../models/data.interface';
+import { Alumno } from '../models/alumno.interface';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 

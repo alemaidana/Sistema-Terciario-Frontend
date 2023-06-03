@@ -1,0 +1,97 @@
+<div class="container">
+  <h1 class="text-center mb-5 display-1">Alumnos</h1>
+
+  <ng-container *ngIf="alumnos; else noAlumnos">
+    <div class="d-flex mb-3">
+     
+      <div class="p-2">
+        <button
+          class="btn btn-primary btn-md rounded"
+          type="button"
+          routerLink="/admin"
+        >
+        <i class="bi bi-arrow-left-circle"></i>
+        </button>
+      </div>
+     
+      <div class="ms-auto p-2">
+        <button
+          type="button"
+          class="btn btn-success btn-md rounded"
+          routerLink="create/new"
+        >
+          <i class="bi bi-database-fill-add"
+            ><span class="p-2">Agregar</span></i
+          >
+        </button>
+      </div>
+    </div>
+
+    <table
+      class="table align-middle mb-0 bg-white shadow p-3 mb-5 bg-body-tertiary rounded"
+    >
+      <thead class="bg-light">
+        <tr>
+          <th>Nombre</th>
+          <th>Carrera</th>
+          <th>Condicion</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let alumno of alumnos">
+          <td>
+            <div class="d-flex align-items-center">
+              <a routerLink="/alumnos/{{ alumno.id }}">
+                <img
+                  src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                  alt=""
+                  style="width: 45px; height: 45px"
+                  class="rounded-circle"
+                />
+              </a>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">
+                  {{ alumno | getAlumnoFullName }}
+                </p>
+                <p class="text-muted mb-0">{{ alumno.email }}</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="fw-normal mb-1">{{ alumno | getCarrera }}</p>
+          </td>
+          <td>
+              <span class="badge text-bg-{{ alumno.estado ? 'success' : 'danger' }}
+                           p-2 rounded"> 
+                {{ alumno | getEstado }}
+              </span>
+          </td>
+          <td>
+            <div class="d-grid gap-2 d-md-block">
+              <button
+                type="button"
+                [routerLink]="['edit', alumno.id]"
+                class="btn btn-warning btn-sm rounded"
+              >
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button
+                type="button"
+                (click)="deleteAlumno(alumno.id!)"
+                class="btn btn-danger btn-sm rounded"
+              >
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+
+  <ng-template #noAlumnos>
+    <h1>No hay alumnos para mostrar. Intentelo mas tarde</h1>
+  </ng-template>
+
+</div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form-alumno-add-and-edit',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-alumno-add-and-edit.component.css']
 })
 export class FormAlumnoAddAndEditComponent {
+
 
 }
