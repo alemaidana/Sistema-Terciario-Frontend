@@ -5,8 +5,11 @@ export interface Alumno{
     legajo:string,
     dni:string,
     email:string,
+    f_nac:Date,
+    curso:string,
     telefono:string,
     password:string,
     estado:boolean,
-    carreraId:number
+    carreraId:number,
+    avatar?:string
 }

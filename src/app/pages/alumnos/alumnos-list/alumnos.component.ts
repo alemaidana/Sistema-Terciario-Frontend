@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ToastrService } from "ngx-toastr";
 import { Alumno } from "src/app/models/alumno.interface";
 import { AlumnosService } from "src/app/services/alumnos.service";
 
@@ -10,7 +11,10 @@ import { AlumnosService } from "src/app/services/alumnos.service";
 export class AlumnosListComponent implements OnInit {
   alumnos: Alumno[] = [];
 
-  constructor(private _alumnosService: AlumnosService) {}
+  constructor(
+    private _alumnosService: AlumnosService,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit(): void {
     this.getAlumnos();
@@ -22,7 +26,11 @@ export class AlumnosListComponent implements OnInit {
         this.alumnos = alumnos;
       },
       error: (error: Error) => {
-        console.log(`An error just happened ${error.message}`);
+        console.log(`An error just happened${error}`);
+        this.toastr.error(
+          "No se ha podido cargar los alumnos, revise su conexion",
+          "Administracion Terciario"
+        );
       },
     });
   }
@@ -30,7 +38,11 @@ export class AlumnosListComponent implements OnInit {
   deleteAlumno(id: number) {
     this._alumnosService.deleteAlumno(id).subscribe({
       next: () => {
-        console.log("alumno eliminado");
+        this.getAlumnos();
+        this.toastr.success(
+          "Alumno eliminado con exito",
+          "Administracion Terciario"
+        );
       },
       error: (error: Error) => {
         console.log(`An error just happened ${error.message}`);

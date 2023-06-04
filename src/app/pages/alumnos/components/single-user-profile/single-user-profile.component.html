@@ -1,9 +1,8 @@
 <section class="h-100 gradient-custom-2">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
-      
-      <h1 class="text-center display-1 my-2">Perfil del Alumno</h1>  
-      
+      <h1 class="text-center display-1 my-2">Perfil del Alumno</h1>
+
       <div class="col col-lg-9 col-xl-7">
         <div class="card">
           <div
@@ -20,7 +19,7 @@
             </div>
             <div class="ms-3" style="margin-top: 130px">
               <h5>{{ alumno | getAlumnoFullName }}</h5>
-              <p>{{ alumno?.legajo }}</p>
+              <h5>Legajo: {{ alumno?.legajo }}</h5>
             </div>
           </div>
 
@@ -44,8 +43,8 @@
                     <h5 class="fw-light mb-1">{{ alumno?.dni }}</h5>
                   </div>
                   <div class="col mb-2">
-                    <h5 class="fw-medium mb-1">Email</h5>
-                    <h5 class="fw-light mb-1">{{ alumno?.email }}</h5>
+                    <h5 class="fw-medium mb-1">Fecha de Nacimiento</h5>
+                    <h5 class="fw-light mb-1">{{ alumno?.f_nac | date }}</h5>
                   </div>
                 </div>
 
@@ -56,7 +55,14 @@
                   </div>
                   <div class="col mb-2">
                     <h5 class="fw-medium mb-1">Estado</h5>
-                    <h5 class="fw-light mb-1">{{ alumno?.estado }}</h5>
+                    <h5 class="fw-light mb-1">{{ alumno?.estado ? 'Regular' : 'Inactivo'  }}</h5>
+                  </div>
+                </div>
+
+                <div class="row g-2 mt-2">
+                  <div class="col mb-2">
+                    <h5 class="fw-medium mb-1">Email</h5>
+                    <h5 class="fw-light mb-1">{{ alumno?.email }}</h5>
                   </div>
                 </div>
 
@@ -64,6 +70,10 @@
                   <div class="col mb-2">
                     <h5 class="fw-medium mb-1">Carrera</h5>
                     <h5 class="fw-light mb-1">{{ alumno! | getCarrera }}</h5>
+                  </div>
+                  <div class="col mb-2">
+                    <h5 class="fw-medium mb-1">Curso</h5>
+                    <h5 class="fw-light mb-1">{{ alumno?.curso }}</h5>
                   </div>
                 </div>
               </div>
@@ -74,7 +84,9 @@
     </div>
 
     <div class="d-grid gap-2 col-4 mx-auto my-3">
-      <button class="btn btn-primary" type="button" routerLink="{{ link }}">Volver</button>
+      <button class="btn btn-primary" type="button" routerLink="{{ link }}">
+        Volver
+      </button>
     </div>
   </div>
 </section>
