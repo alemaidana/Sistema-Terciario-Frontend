@@ -1,0 +1,85 @@
+<div class="container">
+    <h1 class="text-center mb-5 display-1">Asignaturas</h1>
+  
+    <ng-container *ngIf="asignaturas; else noAsignaturas">
+      <div class="d-flex mb-3">
+       
+        <div class="p-2">
+          <button
+            class="btn btn-primary btn-md rounded"
+            type="button"
+            routerLink="/admin"
+          >
+          <i class="bi bi-arrow-left-circle"></i>
+          </button>
+        </div>
+       
+        <div class="ms-auto p-2">
+          <button
+            type="button"
+            class="btn btn-success btn-md rounded"
+            routerLink="create/new"
+          >
+            <i class="bi bi-database-fill-add"
+              ><span class="p-2">Agregar</span></i
+            >
+          </button>
+        </div>
+      </div>
+  
+      <table
+        class="table align-middle mb-0 bg-white shadow p-3 mb-5 bg-body-tertiary rounded"
+      >
+        <thead class="bg-light">
+          <tr>
+            <th>Materia</th>
+            <th>Docente</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dato of asignaturas; let i = index">
+            <td>
+              <div class="d-flex align-items-center"> 
+                <div class="ms-3">
+   
+                  <p class="fw-bold mb-1">
+               
+                  </p>
+                
+                  <p class="text-muted mb-0"></p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p class="fw-normal mb-1">{{ dato }}</p>
+              <p class="text-muted mb-0">{{ dato }}</p>
+            </td>
+            <td>
+              <div class="d-grid gap-2 d-md-block">
+                <button
+                  type="button"
+                  [routerLink]="['edit', dato]"
+                  class="btn btn-warning btn-sm rounded"
+                >
+                  <i class="bi bi-pencil"></i>
+                </button>
+                <button
+                  type="button"
+
+                  class="btn btn-danger btn-sm rounded"
+                >
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+  
+    <ng-template #noAsignaturas>
+      <h1>No hay alumnos para mostrar. Intentelo mas tarde</h1>
+    </ng-template>
+  
+  </div>

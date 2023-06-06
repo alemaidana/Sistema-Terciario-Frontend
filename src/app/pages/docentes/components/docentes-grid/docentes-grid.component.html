@@ -1,0 +1,32 @@
+<div class="col">
+  <div class="card text-center p-2 w-75 mx-auto docentes-grid">
+    <div>
+      <a routerLink="/docentes/{{ link }}" class="text-decoration-none">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
+        class="rounded-circle mb-3"
+        style="width: 150px"
+        alt="Avatar"
+      />
+    </a>
+    </div>
+    <h5 class="mb-2"><strong>{{ docente! | getDocenteFullName }}</strong></h5>
+     <h6 class="text-{{ docente?.estado ? 'success' : 'danger' }}
+     "> {{ docente! | getDocenteEstado }}</h6>
+    <p><b>Matricula:</b>
+     <span class="text-muted">
+      {{ docente?.matricula }}
+     </span>
+    </p>
+     <div class="d-grid gap-2 d-md-block">
+      <button
+        type="button"
+        routerLink="/docentes/edit/{{ link }}"
+        class="btn btn-warning btn-sm rounded"
+      >
+        Editar
+        <!-- <i class="bi bi-pencil"></i> -->
+      </button>
+    </div>
+  </div>
+</div>

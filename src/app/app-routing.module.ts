@@ -10,6 +10,11 @@ import { PageNotFoundComponent } from "./pages/page-not-found/page-not-found.com
 import { AlumnoDetailComponent } from "./pages/alumnos/alumno-detail/alumno-detail.component";
 import { AlumnoAddComponent } from "./pages/alumnos/alumno-add/alumno-add.component";
 import { AlumnoEditComponent } from "./pages/alumnos/alumno-edit/alumno-edit.component";
+import { DocentesListComponent } from "./pages/docentes/docentes-list/docentes-list.component";
+import { DocenteDetailComponent } from "./pages/docentes/docente-detail/docente-detail.component";
+import { DocenteAddComponent } from "./pages/docentes/docente-add/docente-add.component";
+import { DocenteEditComponent } from "./pages/docentes/docente-edit/docente-edit.component";
+import { AsignaturasListComponent } from "./pages/asignaturas/asignaturas-list/asignaturas-list.component";
 //Guards
 import { AuthGuard } from "./guards/auth.guard";
 
@@ -51,6 +56,31 @@ const routes: Routes = [
   {
     path: "alumnos/edit/:id",
     component: AlumnoEditComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "docentes",
+    component: DocentesListComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "docentes/:id",
+    component: DocenteDetailComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "docentes/create/new",
+    component: DocenteAddComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "docentes/edit/:id",
+    component: DocenteEditComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "asignaturas",
+    component: AsignaturasListComponent,
     canActivate: [AuthGuard],
   },
   {

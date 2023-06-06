@@ -1,0 +1,248 @@
+<div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <img
+          class="d-block mx-auto mb-4"
+          src="../../../assets/images/ametcito.png"
+          alt=""
+          width="150"
+          height="150"
+        />
+        <h1 class="display-1">Agregar Docente</h1>
+      </div>
+  
+      <div class="row g-5">
+        <div class="col-md-5 col-lg-4 order-md-last">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-dark">Algunos Tips utiles</span>
+          </h4>
+  
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Sobre este formulario
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Aqui tratamos información clasificada de la institucion. Por lo
+                  que solamente un personal limitado puede tener acceso a ella.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Seguridad ante todo
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Contamos con buenas medidas de seguridad que garantizan la
+                  privacidad e integridad de los datos. Recuerda siempre activar
+                  la copia de seguridad.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  Datos claves
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Recuerda que puedes imprimir este formulario o el contenido del
+                  mismo en la seccion <strong>Generar</strong> del panel de
+                  administracion
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Datos Docente</h4>
+  
+          <form class="needs-validation" novalidate [formGroup]="formGroup">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  placeholder="Ingrese nombre del docente"
+                  value=""
+                  formControlName="nombre"
+                  required
+                />
+                <div class="invalid-feedback">Valid first name is required.</div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellido"
+                  placeholder="Ingrese apellido del docente"
+                  value=""
+                  formControlName="apellido"
+                  required
+                />
+                <div class="invalid-feedback">Valid last name is required.</div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="matricula" class="form-label">Matricula</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="matricula"
+                  placeholder="Ingrese matricula del docente"
+                  value=""
+                  formControlName="matricula"
+                  required
+                />
+                <div class="invalid-feedback">Valid legajo is required.</div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="dni" class="form-label">DNI</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="dni"
+                  placeholder="Ingrese dni del docente"
+                  value=""
+                  formControlName="dni"
+                  required
+                />
+                <div class="invalid-feedback">Valid dni is required.</div>
+              </div>
+  
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="docente@isft220.edu.ar"
+                  formControlName="email"
+                />
+                <div class="invalid-feedback">
+                  Please enter a valid email address
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="f_nac" class="form-label">Fecha de Nacimiento</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="f_nac"
+                  value=""
+                  formControlName="f_nac"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Valid Fecha de Nacimiento is required.
+                </div>
+              </div>
+
+  
+              <div class="col-12">
+                <label for="telefono" class="form-label">Telefono</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="telefono"
+                  placeholder="Ejemplo 1566333111"
+                  formControlName="telefono"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please enter a valid email telefono
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="password"
+                  placeholder="Ingrese password a generar para el docente"
+                  value=""
+                  formControlName="password"
+                  required
+                />
+                <div class="invalid-feedback">Valid password is required.</div>
+              </div>
+  
+              <div class="col-md-5">
+                <label for="estado" class="form-label">Estado</label>
+                <select
+                  class="form-select"
+                  id="estado"
+                  formControlName="estado"
+                  required
+                >
+                  <option value="1">Activo</option>
+                  <option value="0">Inactivo</option>
+                </select>
+                <div class="invalid-feedback">Please select a valid estado.</div>
+              </div>
+
+            </div>  
+
+            <hr class="my-4" />
+  
+            <button
+              class="w-100 btn btn-primary btn-lg mb-4"
+              (click)="addDocente()"
+              type="submit"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  

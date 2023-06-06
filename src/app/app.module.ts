@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AlumnoModule } from './pages/alumnos/modules/alumno/alumno.module';
+import { DocenteModule } from './pages/docentes/modules/docente/docente.module';
+import { AsignaturaModule } from './pages/asignaturas/modules/asignatura/asignatura.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -32,6 +34,8 @@ import { AddTokenInterceptor } from './utils/add-token.interceptor';
     AppRoutingModule,
     ReactiveFormsModule,
     AlumnoModule,
+    DocenteModule,
+    AsignaturaModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 10000,

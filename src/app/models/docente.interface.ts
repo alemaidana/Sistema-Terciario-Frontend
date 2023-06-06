@@ -1,15 +1,13 @@
-export interface Alumno {
+export interface Docente {
   id?: number;
   nombre: string;
   apellido: string;
-  legajo: string;
+  matricula: string;
   dni: string;
   email: string;
-  f_nac: Date;
-  curso: string;
   telefono: string;
   password: string;
   estado: boolean;
-  carreraId: number;
+  f_nac: Date;
   avatar?: string;
 }
