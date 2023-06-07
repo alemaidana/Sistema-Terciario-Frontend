@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { ToastrService } from "ngx-toastr";
+import { rutasInternas } from "src/app/mocks/rutasInternas.mock";
 import { Alumno } from "src/app/models/alumno.interface";
+import { LinksPagina } from "src/app/models/extra/rutasInternas.interface";
 import { AlumnosService } from "src/app/services/alumnos.service";
 
 @Component({
@@ -10,6 +12,7 @@ import { AlumnosService } from "src/app/services/alumnos.service";
 })
 export class AlumnosListComponent implements OnInit {
   alumnos: Alumno[] = [];
+  links:LinksPagina = rutasInternas[0].links;
 
   constructor(
     private _alumnosService: AlumnosService,
@@ -26,7 +29,7 @@ export class AlumnosListComponent implements OnInit {
         this.alumnos = alumnos;
       },
       error: (error: Error) => {
-        console.log(`An error just happened${error}`);
+        console.log(`An error just happened${error.message}`);
         this.toastr.error(
           "No se ha podido cargar los alumnos, revise su conexion",
           "Administracion Terciario"

@@ -14,6 +14,7 @@ import { AlumnoEditComponent } from '../../alumno-edit/alumno-edit.component';
 import { AlumnosListComponent } from '../../alumnos-list/alumnos.component';
 import { FormAlumnoAddAndEditComponent } from '../../components/form-alumno-add-and-edit/form-alumno-add-and-edit.component';
 import { SingleUserProfileComponent } from '../../components/single-user-profile/single-user-profile.component';
+import { GoBackAndCreateBarComponent } from 'src/app/shared/components/go-back-and-create-bar/go-back-and-create-bar.component';
 
 //Pipes
 import { GetAlumnoFullNamePipe } from '../../pipes/get-full-name.pipe';
@@ -26,6 +27,7 @@ import { AddTokenInterceptor } from 'src/app/utils/add-token.interceptor';
 
 @NgModule({
   declarations: [
+    GoBackAndCreateBarComponent,
     AlumnosListComponent,
     AlumnoDetailComponent,
     FormAlumnoAddAndEditComponent,

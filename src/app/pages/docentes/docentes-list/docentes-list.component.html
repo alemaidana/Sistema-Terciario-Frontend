@@ -4,29 +4,11 @@
       <h1 class="text-center mb-5 display-1">Docentes</h1>
     </div>
 
-    <div class="d-flex mb-3">
-      <div class="p-2">
-        <button
-          class="btn btn-primary btn-md rounded"
-          type="button"
-          routerLink="/admin"
-        >
-          <i class="bi bi-arrow-left-circle"></i>
-        </button>
-      </div>
+    <app-go-back-and-create-bar
+      [linkRegreso]="links.linkRegreso"
+      [linkCrear]="links.linkCreacion"
+    ></app-go-back-and-create-bar>
 
-      <div class="ms-auto p-2">
-        <button
-          type="button"
-          class="btn btn-success btn-md rounded"
-          routerLink="create/new"
-        >
-          <i class="bi bi-database-fill-add"
-            ><span class="p-2">Agregar</span></i
-          >
-        </button>
-      </div>
-    </div>
 
     <ng-container *ngIf="docentes; else noDocentes">
       <div class="row row-cols-1 row-cols-md-3 g-4">

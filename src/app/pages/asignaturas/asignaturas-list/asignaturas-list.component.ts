@@ -14,10 +14,8 @@ import { MateriasService } from "src/app/services/materias.service";
 })
 export class AsignaturasListComponent {
   asignaturas: Asignatura[] = [];
-  docente!: Docente;
-  materia!: Materia;
-  fullNames: string[] = [];
-  materias: string[] = [];
+  listaDocentes: Docente[] = [];
+  listaMaterias: Materia[] = [];
 
   constructor(
     private _asignaturasService: AsignaturasService,
@@ -28,39 +26,47 @@ export class AsignaturasListComponent {
 
   ngOnInit(): void {
     this.getAsignaturas();
-    console.log(this.fullNames);
-    console.log(this.materias);
+    this.getDocentes();
+    this.getMaterias();
   }
 
   getAsignaturas() {
     this._asignaturasService.getAllAsignaturas().subscribe({
       next: (asignaturas: Asignatura[]) => {
         this.asignaturas = asignaturas;
-
-        asignaturas.forEach((asignatura) => {
-          this._docenteService
-            .getDocente(Number(asignatura.docenteId))
-            .subscribe({
-              next: (d: Docente) => {
-                this.docente = d;
-                this.fullNames.push(
-                  this.docente.nombre + " " + this.docente.apellido
-                );
-              },
-            });
-
-          this._materiaService
-            .getMateria(Number(asignatura.subjectId))
-            .subscribe({
-              next: (m: Materia) => {
-                this.materia = m;
-                this.materias.push(this.materia.nombre);
-              },
-            });
-        });
       },
       error: (error: Error) => {
-        console.log(`An error just happened${error}`);
+        console.log(`An error just happened${error.message}`);
+        this.toastr.error(
+          "No se ha podido cargar las asignaturas, revise su conexion",
+          "Administracion Terciario"
+        );
+      },
+    });
+  }
+
+  getDocentes() {
+    this._docenteService.getAllDocentes().subscribe({
+      next: (docente: Docente[]) => {
+        this.listaDocentes = docente;
+      },
+      error: (error: Error) => {
+        console.log(`An error just happened${error.message}`);
+        this.toastr.error(
+          "No se ha podido cargar las asignaturas, revise su conexion",
+          "Administracion Terciario"
+        );
+      },
+    });
+  }
+
+  getMaterias() {
+    this._materiaService.getAllMaterias().subscribe({
+      next: (materias: Materia[]) => {
+        this.listaMaterias = materias;
+      },
+      error: (error: Error) => {
+        console.log(`An error just happened${error.message}`);
         this.toastr.error(
           "No se ha podido cargar las asignaturas, revise su conexion",
           "Administracion Terciario"

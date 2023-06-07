@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { rutasInternas } from 'src/app/mocks/rutasInternas.mock';
 import { Docente } from 'src/app/models/docente.interface';
+import { LinksPagina } from 'src/app/models/extra/rutasInternas.interface';
 import { DocentesService } from 'src/app/services/docentes.service';
 
 @Component({
@@ -10,6 +12,7 @@ import { DocentesService } from 'src/app/services/docentes.service';
 })
 export class DocentesListComponent {
   docentes: Docente[] = [];
+  links:LinksPagina = rutasInternas[1].links;
 
   constructor(
     private _docentesService: DocentesService,

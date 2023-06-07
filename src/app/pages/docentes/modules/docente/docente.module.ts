@@ -14,6 +14,7 @@ import { DocenteEditComponent } from '../../docente-edit/docente-edit.component'
 import { DocentesListComponent } from '../../docentes-list/docentes-list.component';
 import { DocentesGridComponent } from '../../components/docentes-grid/docentes-grid.component';
 import { DocentesSingleProfileComponent } from '../../components/docentes-single-profile/docentes-single-profile.component';
+import { GoBackAndCreateBarComponent } from 'src/app/shared/components/go-back-and-create-bar/go-back-and-create-bar.component';
 
 //Pipes
 import { GetDocenteFullNamePipe } from '../../pipes/get-docente-full-name.pipe';
@@ -25,6 +26,7 @@ import { AddTokenInterceptor } from 'src/app/utils/add-token.interceptor';
 
 @NgModule({
   declarations: [
+    GoBackAndCreateBarComponent,
     DocenteAddComponent,
     DocenteDetailComponent,
     DocenteEditComponent,
