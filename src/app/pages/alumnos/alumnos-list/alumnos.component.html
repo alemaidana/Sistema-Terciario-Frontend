@@ -2,10 +2,11 @@
   <h1 class="text-center mb-5 display-1">Alumnos</h1>
 
   <ng-container *ngIf="alumnos; else noAlumnos">
-    <app-go-back-and-create-bar
-      [linkRegreso]="links.linkRegreso"
-      [linkCrear]="links.linkCreacion"
-    ></app-go-back-and-create-bar>
+
+    <app-alumnos-nav-bar
+    [linkRegreso]="links.linkRegreso"
+    [linkCrear]="links.linkCreacion"
+    ></app-alumnos-nav-bar>
 
     <table
       class="table align-middle mb-0 bg-white shadow p-3 mb-5 bg-body-tertiary rounded"

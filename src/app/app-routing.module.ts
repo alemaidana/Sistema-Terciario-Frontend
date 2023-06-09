@@ -15,6 +15,8 @@ import { DocenteDetailComponent } from "./pages/docentes/docente-detail/docente-
 import { DocenteAddComponent } from "./pages/docentes/docente-add/docente-add.component";
 import { DocenteEditComponent } from "./pages/docentes/docente-edit/docente-edit.component";
 import { AsignaturasListComponent } from "./pages/asignaturas/asignaturas-list/asignaturas-list.component";
+import { AsignaturasAddComponent } from "./pages/asignaturas/asignaturas-add/asignaturas-add.component";
+import { AsignaturasEditComponent } from "./pages/asignaturas/asignaturas-edit/asignaturas-edit.component";
 //Guards
 import { AuthGuard } from "./guards/auth.guard";
 
@@ -81,6 +83,16 @@ const routes: Routes = [
   {
     path: "asignaturas",
     component: AsignaturasListComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "asignaturas/create/new",
+    component: AsignaturasAddComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "asignaturas/edit/:id",
+    component: AsignaturasEditComponent,
     canActivate: [AuthGuard],
   },
   {

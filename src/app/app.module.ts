@@ -17,6 +17,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { SingleLinkCardComponent } from './shared/components/single-link-card/single-link-card.component';
+
+//** Interceptor **/
 import { AddTokenInterceptor } from './utils/add-token.interceptor';
 
 @NgModule({

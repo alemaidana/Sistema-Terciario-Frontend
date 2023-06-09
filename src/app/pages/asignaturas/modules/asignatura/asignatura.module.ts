@@ -6,7 +6,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-import { AddTokenInterceptor } from 'src/app/utils/add-token.interceptor';
 
 //** Components **/
 import { AsignaturasAddComponent } from '../../asignaturas-add/asignaturas-add.component';
@@ -14,10 +13,14 @@ import { AsignaturasDetailComponent } from '../../asignaturas-detail/asignaturas
 import { AsignaturasEditComponent } from '../../asignaturas-edit/asignaturas-edit.component';
 import { AsignaturasListComponent } from '../../asignaturas-list/asignaturas-list.component';
 import { AsignaturasTableComponent } from '../../components/asignaturas-table/asignaturas-table.component';
+import { AsignaturasRelatedComponent } from '../../asignaturas-related/asignaturas-related.component';
 
 //** Pipes **/
 import { GetDatosDocentePipe } from '../../pipes/get-datos-docente.pipe';
 import { GetDatosMateriaPipe } from '../../pipes/get-datos-materia.pipe';
+
+//** Interceptor **/
+import { AddTokenInterceptor } from 'src/app/utils/add-token.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { GetDatosMateriaPipe } from '../../pipes/get-datos-materia.pipe';
     AsignaturasEditComponent,
     AsignaturasDetailComponent,
     AsignaturasTableComponent,
+    AsignaturasRelatedComponent,
     GetDatosDocentePipe,
     GetDatosMateriaPipe,
   ],

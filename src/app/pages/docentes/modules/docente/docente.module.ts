@@ -1,4 +1,4 @@
-//Modules
+//** Modules **/
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
@@ -7,32 +7,32 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
-//Components
+//** Components **/
 import { DocenteAddComponent } from '../../docente-add/docente-add.component';
 import { DocenteDetailComponent } from '../../docente-detail/docente-detail.component';
 import { DocenteEditComponent } from '../../docente-edit/docente-edit.component';
 import { DocentesListComponent } from '../../docentes-list/docentes-list.component';
 import { DocentesGridComponent } from '../../components/docentes-grid/docentes-grid.component';
 import { DocentesSingleProfileComponent } from '../../components/docentes-single-profile/docentes-single-profile.component';
-import { GoBackAndCreateBarComponent } from 'src/app/shared/components/go-back-and-create-bar/go-back-and-create-bar.component';
+import { DocentesNavBarComponent } from '../../components/docentes-nav-bar/docentes-nav-bar.component';
 
-//Pipes
+//** Pipes **/
 import { GetDocenteFullNamePipe } from '../../pipes/get-docente-full-name.pipe';
 import { GetDocenteEstadoPipe } from '../../pipes/get-docente-estado.pipe';
 
-//Interceptor
+//** Interceptor **/
 import { AddTokenInterceptor } from 'src/app/utils/add-token.interceptor';
 
 
 @NgModule({
   declarations: [
-    GoBackAndCreateBarComponent,
     DocenteAddComponent,
     DocenteDetailComponent,
     DocenteEditComponent,
     DocentesListComponent,
     DocentesGridComponent,
     DocentesSingleProfileComponent,
+    DocentesNavBarComponent,
     GetDocenteFullNamePipe,
     GetDocenteEstadoPipe,
   ],

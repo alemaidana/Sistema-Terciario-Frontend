@@ -1,1 +1,145 @@
-<p>asignaturas-edit works!</p>
+<div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <img
+          class="d-block mx-auto mb-4"
+          src="../../../assets/images/ametcito.png"
+          alt=""
+          width="150"
+          height="150"
+        />
+        <h1 class="display-1">Agregar Asignatura</h1>
+      </div>
+  
+      <div class="row g-5">
+        <div class="col-md-5 col-lg-4 order-md-last">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-dark">Algunos Tips utiles</span>
+          </h4>
+  
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Sobre este formulario
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Aqui tratamos información clasificada de la institucion. Por lo
+                  que solamente un personal limitado puede tener acceso a ella.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Seguridad ante todo
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Contamos con buenas medidas de seguridad que garantizan la
+                  privacidad e integridad de los datos. Recuerda siempre activar
+                  la copia de seguridad.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  Datos claves
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Recuerda que puedes imprimir este formulario o el contenido del
+                  mismo en la seccion <strong>Generar</strong> del panel de
+                  administracion
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Datos Asignatura</h4>
+  
+          <form class="needs-validation" novalidate [formGroup]="formGroup">
+            <div class="row g-3">
+              
+              <div class="col-12">
+                <label for="docente" class="form-label">Docente</label>
+                <select
+                  class="form-select"
+                  id="docente"
+                  formControlName="docente"
+                  required
+                >
+                  <option *ngFor="let docente of listaDocentes" value="{{ docente.id }}"> {{ docente.nombre }} {{ docente.apellido }}</option>
+                </select>
+                <div class="invalid-feedback">Please provide a Docente.</div>
+              </div>
+  
+              <div class="col-12">
+                <label for="materia" class="form-label">Materia</label>
+                <select
+                  class="form-select"
+                  id="materia"
+                  formControlName="materia"
+                  required
+                >
+                  <option *ngFor="let materia of listaMaterias" value="{{ materia.id }}"> {{ materia.nombre }} </option>
+                </select>
+                <div class="invalid-feedback">Please provide a materia.</div>
+              </div>
+            </div>
+  
+            <hr class="my-4" />
+  
+            <button
+              class="w-100 btn btn-primary btn-lg mb-4"
+              (click)="updateAsignatura()"
+              type="submit"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  

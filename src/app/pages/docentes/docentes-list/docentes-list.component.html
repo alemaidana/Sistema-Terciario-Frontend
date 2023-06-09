@@ -4,11 +4,10 @@
       <h1 class="text-center mb-5 display-1">Docentes</h1>
     </div>
 
-    <app-go-back-and-create-bar
+    <app-docentes-nav-bar
       [linkRegreso]="links.linkRegreso"
       [linkCrear]="links.linkCreacion"
-    ></app-go-back-and-create-bar>
-
+    ></app-docentes-nav-bar>
 
     <ng-container *ngIf="docentes; else noDocentes">
       <div class="row row-cols-1 row-cols-md-3 g-4">
