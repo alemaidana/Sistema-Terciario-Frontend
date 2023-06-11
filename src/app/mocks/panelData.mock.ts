@@ -13,7 +13,7 @@ export const adminPanel: cardData[] = [
     {title: 'Alumnos', icon: 'bi bi-person-fill', link: '/alumnos'},
     {title: 'Docentes', icon: 'bi bi-person-fill', link: '/docentes'},
     {title: 'Asignaturas', icon: 'bi bi-bookmark-star', link: '/asignaturas'},
-    {title: 'Inscripciones', icon: 'bi bi-journal-check', link: ''},
+    {title: 'Finales', icon: 'bi bi-journal-check', link: '/finales'},
     {title: 'Examenes', icon: 'bi bi-blockquote-right', link: ''},
     {title: 'Asistencias', icon: 'bi bi-check-square', link: ''},
     {title: 'Calificaciones', icon: 'bi bi-file-earmark-richtext', link: ''},

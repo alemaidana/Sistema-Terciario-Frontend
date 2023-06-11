@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Docente } from 'src/app/models/docente.interface';
-import { DocentesService } from 'src/app/services/docentes.service';
+import { DocentesService } from 'src/app/services/docentes/docentes.service';
 
 @Component({
   selector: 'app-docente-detail',

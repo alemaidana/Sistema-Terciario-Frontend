@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
-import { Asignatura } from '../models/asignatura.interface';
+import { Asignatura } from '../../models/asignatura.interface';
 import { Observable, switchMap } from 'rxjs';
 
 @Injectable({

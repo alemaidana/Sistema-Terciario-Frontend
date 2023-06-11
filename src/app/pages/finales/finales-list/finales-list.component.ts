@@ -1,23 +1,28 @@
-import { Component, OnInit } from "@angular/core";
-import { ToastrService } from "ngx-toastr";
-import { Asignatura } from "src/app/models/asignatura.interface";
-import { Docente } from "src/app/models/docente.interface";
-import { Materia } from "src/app/models/materias.interface";
-import { AsignaturasService } from "src/app/services/asignaturas/asignaturas.service";
-import { DocentesService } from "src/app/services/docentes/docentes.service";
-import { MateriasService } from "src/app/services/materias/materias.service";
+import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { Asignatura } from 'src/app/models/asignatura.interface';
+import { Docente } from 'src/app/models/docente.interface';
+import { Final } from 'src/app/models/final.interface';
+import { Materia } from 'src/app/models/materias.interface';
+import { AsignaturasService } from 'src/app/services/asignaturas/asignaturas.service';
+import { DocentesService } from 'src/app/services/docentes/docentes.service';
+import { FinalesService } from 'src/app/services/finales/finales.service';
+import { MateriasService } from 'src/app/services/materias/materias.service';
 
 @Component({
-  selector: "app-asignaturas-list",
-  templateUrl: "./asignaturas-list.component.html",
-  styleUrls: ["./asignaturas-list.component.css"],
+  selector: 'app-finales-list',
+  templateUrl: './finales-list.component.html',
+  styleUrls: ['./finales-list.component.css']
 })
-export class AsignaturasListComponent implements OnInit {
-  asignaturas: Asignatura[] = [];
+export class FinalesListComponent {
+
+  listaFinales:Final[] = [];
+  listaAsignaturas: Asignatura[] = [];
   listaDocentes: Docente[] = [];
   listaMaterias: Materia[] = [];
 
   constructor(
+    private _finalesService:FinalesService,
     private _asignaturasService: AsignaturasService,
     private _docenteService: DocentesService,
     private _materiaService: MateriasService,
@@ -25,15 +30,31 @@ export class AsignaturasListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.getFinales();
     this.getAsignaturas();
     this.getDocentes();
     this.getMaterias();
   }
 
+  getFinales() {
+    this._finalesService.getAllFinales().subscribe({
+      next: (finales: Final[]) => {
+        this.listaFinales = finales;
+      },
+      error: (error: Error) => {
+        console.log(`An error just happened${error.message}`);
+        this.toastr.error(
+          "No se ha podido cargar los finales, revise su conexion",
+          "Administracion Terciario"
+        );
+      },
+    });
+  }
+
   getAsignaturas() {
     this._asignaturasService.getAllAsignaturas().subscribe({
       next: (asignaturas: Asignatura[]) => {
-        this.asignaturas = asignaturas;
+        this.listaAsignaturas = asignaturas;
       },
       error: (error: Error) => {
         console.log(`An error just happened${error.message}`);
@@ -75,12 +96,12 @@ export class AsignaturasListComponent implements OnInit {
     });
   }
 
-  deleteAsignatura(id: number) {
-    this._asignaturasService.deleteAsignatura(id).subscribe({
+  deleteFinal(id: number) {
+    this._finalesService.deleteFinal(id).subscribe({
       next: () => {
-        this.getAsignaturas();
+        this.getFinales();
         this.toastr.success(
-          "Asignatura eliminada con exito",
+          "Final eliminado con exito",
           "Administracion Terciario"
         );
       },

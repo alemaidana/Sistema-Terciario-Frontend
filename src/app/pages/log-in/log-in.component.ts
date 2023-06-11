@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user.interface';
-import { ErrorService } from 'src/app/services/error.service';
-import { UserService } from 'src/app/services/user.service';
+import { ErrorService } from 'src/app/services/errors/error.service';
+import { UserService } from 'src/app/services/users/user.service';
 
 @Component({
   selector: 'app-log-in',

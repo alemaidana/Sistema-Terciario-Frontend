@@ -6,10 +6,10 @@ import { ToastrService } from "ngx-toastr";
 import { Asignatura } from "src/app/models/asignatura.interface";
 import { Docente } from "src/app/models/docente.interface";
 import { Materia } from "src/app/models/materias.interface";
-import { AsignaturasService } from "src/app/services/asignaturas.service";
-import { DocentesService } from "src/app/services/docentes.service";
-import { ErrorService } from "src/app/services/error.service";
-import { MateriasService } from "src/app/services/materias.service";
+import { AsignaturasService } from "src/app/services/asignaturas/asignaturas.service";
+import { DocentesService } from "src/app/services/docentes/docentes.service";
+import { ErrorService } from "src/app/services/errors/error.service";
+import { MateriasService } from "src/app/services/materias/materias.service";
 
 @Component({
   selector: "app-asignaturas-add",

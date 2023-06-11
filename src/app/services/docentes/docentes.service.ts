@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Docente } from '../models/docente.interface';
+import { Docente } from 'src/app/models/docente.interface';
 import { environment } from 'src/environments/environment.development';
 import { Observable } from 'rxjs';
 

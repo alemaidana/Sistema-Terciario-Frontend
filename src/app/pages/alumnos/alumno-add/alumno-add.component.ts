@@ -4,8 +4,8 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
 import { Alumno } from "src/app/models/alumno.interface";
-import { AlumnosService } from "src/app/services/alumnos.service";
-import { ErrorService } from "src/app/services/error.service";
+import { AlumnosService } from "src/app/services/alumnos/alumnos.service";
+import { ErrorService } from "src/app/services/errors/error.service";
 
 @Component({
   selector: "app-alumno-add",

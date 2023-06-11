@@ -19,86 +19,26 @@ import { AsignaturasAddComponent } from "./pages/asignaturas/asignaturas-add/asi
 import { AsignaturasEditComponent } from "./pages/asignaturas/asignaturas-edit/asignaturas-edit.component";
 //Guards
 import { AuthGuard } from "./guards/auth.guard";
+import { FinalesListComponent } from "./pages/finales/finales-list/finales-list.component";
 
 const routes: Routes = [
-  {
-    path: "",
-    redirectTo: "login",
-    pathMatch: "full",
-  },
-  {
-    path: "login",
-    component: LogInComponent,
-  },
-  {
-    path: "home",
-    component: HomeComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "admin",
-    component: AdminComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "alumnos",
-    component: AlumnosListComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "alumnos/:id",
-    component: AlumnoDetailComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "alumnos/create/new",
-    component: AlumnoAddComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "alumnos/edit/:id",
-    component: AlumnoEditComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "docentes",
-    component: DocentesListComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "docentes/:id",
-    component: DocenteDetailComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "docentes/create/new",
-    component: DocenteAddComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "docentes/edit/:id",
-    component: DocenteEditComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "asignaturas",
-    component: AsignaturasListComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "asignaturas/create/new",
-    component: AsignaturasAddComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "asignaturas/edit/:id",
-    component: AsignaturasEditComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: "**",
-    component: PageNotFoundComponent,
-  },
+  { path: "", redirectTo: "login", pathMatch: "full" },
+  { path: "login", component: LogInComponent },
+  { path: "home", component: HomeComponent, canActivate: [AuthGuard] },
+  { path: "admin", component: AdminComponent, canActivate: [AuthGuard] },
+  { path: "alumnos", component: AlumnosListComponent, canActivate: [AuthGuard] },
+  { path: "alumnos/:id", component: AlumnoDetailComponent, canActivate: [AuthGuard] },
+  { path: "alumnos/create/new", component: AlumnoAddComponent, canActivate: [AuthGuard] },
+  { path: "alumnos/edit/:id", component: AlumnoEditComponent, canActivate: [AuthGuard] },
+  { path: "docentes", component: DocentesListComponent, canActivate: [AuthGuard] },
+  { path: "docentes/:id", component: DocenteDetailComponent, canActivate: [AuthGuard] },
+  { path: "docentes/create/new", component: DocenteAddComponent, canActivate: [AuthGuard] },
+  { path: "docentes/edit/:id", component: DocenteEditComponent, canActivate: [AuthGuard] },
+  { path: "asignaturas", component: AsignaturasListComponent, canActivate: [AuthGuard] },
+  { path: "asignaturas/create/new", component: AsignaturasAddComponent, canActivate: [AuthGuard] },
+  { path: "asignaturas/edit/:id", component: AsignaturasEditComponent, canActivate: [AuthGuard] },
+  { path: "finales", component: FinalesListComponent, canActivate: [AuthGuard] },
+  { path: "**", component: PageNotFoundComponent },
 ];
 
 @NgModule({

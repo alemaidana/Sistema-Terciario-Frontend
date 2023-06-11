@@ -4,8 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Docente } from 'src/app/models/docente.interface';
-import { DocentesService } from 'src/app/services/docentes.service';
-import { ErrorService } from 'src/app/services/error.service';
+import { DocentesService } from 'src/app/services/docentes/docentes.service';
+import { ErrorService } from 'src/app/services/errors/error.service';
 
 @Component({
   selector: 'app-docente-add',

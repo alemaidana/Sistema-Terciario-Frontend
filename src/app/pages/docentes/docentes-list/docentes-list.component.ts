@@ -3,7 +3,7 @@ import { ToastrService } from 'ngx-toastr';
 import { rutasInternas } from 'src/app/mocks/rutasInternas.mock';
 import { Docente } from 'src/app/models/docente.interface';
 import { LinksPagina } from 'src/app/models/extra/rutasInternas.interface';
-import { DocentesService } from 'src/app/services/docentes.service';
+import { DocentesService } from 'src/app/services/docentes/docentes.service';
 
 @Component({
   selector: 'app-docentes-list',
