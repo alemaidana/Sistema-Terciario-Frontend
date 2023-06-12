@@ -21,6 +21,7 @@ import { SingleLinkCardComponent } from './shared/components/single-link-card/si
 
 //** Interceptor **/
 import { AddTokenInterceptor } from './utils/add-token.interceptor';
+import { ExamenesModule } from './pages/examenes/modules/examenes/examenes.module';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AddTokenInterceptor } from './utils/add-token.interceptor';
     DocenteModule,
     AsignaturaModule,
     FinalesModule,
+    ExamenesModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 10000,

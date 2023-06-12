@@ -13,7 +13,7 @@ import { AsignaturasDetailComponent } from '../../asignaturas-detail/asignaturas
 import { AsignaturasEditComponent } from '../../asignaturas-edit/asignaturas-edit.component';
 import { AsignaturasListComponent } from '../../asignaturas-list/asignaturas-list.component';
 import { AsignaturasTableComponent } from '../../components/asignaturas-table/asignaturas-table.component';
-import { AsignaturasRelatedComponent } from '../../asignaturas-related/asignaturas-related.component';
+import { AsignaturasCorrelativesComponent } from '../../asignaturas-correlatives/asignaturas-correlatives.component';
 
 //** Pipes **/
 import { GetDatosDocentePipe } from '../../pipes/get-datos-docente.pipe';
@@ -29,7 +29,7 @@ import { AddTokenInterceptor } from 'src/app/utils/add-token.interceptor';
     AsignaturasEditComponent,
     AsignaturasDetailComponent,
     AsignaturasTableComponent,
-    AsignaturasRelatedComponent,
+    AsignaturasCorrelativesComponent,
     GetDatosDocentePipe,
     GetDatosMateriaPipe,
   ],

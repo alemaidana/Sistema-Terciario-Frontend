@@ -1,0 +1,52 @@
+<div class="container py-5">
+  <h1 class="text-center mb-5" style="font-size: 18px;">CONSTANCIA ALUMNO REGULAR</h1>
+  <div class="card p-5">
+      <div class="row mt-5">
+        
+        <div class="col-lg-7 col-md-7"><h2 style="font-size: 14px; font-weight: bold;">
+          DIRECCIÓN GENERAL DE CULTURA Y EDUCACIÓN</h2>
+        <h2 style="font-size: 12px; font-weight: bold;">
+          <span style="border-bottom: 1px solid #000;">DIRECCIÓN DE EDUCACIÓN SUPERIOR DE FORMACIÓN TÉCNICA</span>
+          </h2>
+      
+        <h2 style="font-size: 12px; font-weight: bold;">
+          INSTITUTO SUPERIOR DE FORMACIÓN TÉCNICA Nº 220 - AMET
+        </h2>
+      </div>
+        <div class="col-lg-5 col-md-5"><h2 style="font-size: 14px; font-weight: bold;">
+          DIRECCIÓN GENERAL DE CULTURA Y EDUCACIÓN
+          </h2>
+        <h2 style="font-size: 12px; font-weight: bold;">
+          <span style="border-bottom: 1px solid #000;">DIRECCIÓN DE EDUCACIÓN SUPERIOR DE FORMACIÓN TÉCNICA</span>
+          </h2>
+        <h2 style="font-size: 12px; font-weight: bold;">
+          INSTITUTO SUPERIOR DE FORMACIÓN TÉCNICA Nº 220 - AMET
+        </h2>
+        </div>
+      </div>
+    
+      <div class="row mt-5">
+      <div class="col-lg-12"> 
+        <img class="img-fluid" src="logo-ba.png">
+      </div>
+        <div class="row mt-5">
+          <h1 class="text-center pb-5" style="font-size: 16px; font-weight: bold;">
+            CONSTANCIA DE ALUMNO REGULAR
+          </h1>
+          <p class="text-center">
+            Se deja constancia de que a la fecha el Sr. {{ alumno?.nombre }} {{ alumno?.apellido }} 
+            DNI Nº {{ alumno?.dni }}  Superior de Formación Técnica Nº 220, 
+            en la tecnicatura Superior en {{ alumno! | getCarrera }} (Res. 320/13) curso {{ alumno?.curso }}.
+          </p>
+          <p class="text-center">
+            A pedido del interesado y para ser presentada ante quien corresponda, se extiende la presente en la ciudad de Vicente López a los 03 días del mes de Abril de 2023.
+          </p>
+        </div>
+    </div> <!-- Fin Card -->
+  </div>
+</div>
+<div class="d-grid gap-2 col-4 mx-auto my-3">
+      <button class="btn btn-primary" type="button" routerLink="{{ returnLink }}">
+        Volver
+      </button>
+    </div>

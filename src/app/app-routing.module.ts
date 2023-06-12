@@ -20,24 +20,39 @@ import { AsignaturasEditComponent } from "./pages/asignaturas/asignaturas-edit/a
 //Guards
 import { AuthGuard } from "./guards/auth.guard";
 import { FinalesListComponent } from "./pages/finales/finales-list/finales-list.component";
+import { AsignaturasCorrelativesComponent } from "./pages/asignaturas/asignaturas-correlatives/asignaturas-correlatives.component";
+import { AlumnosRegularRecordComponent } from "./pages/alumnos/alumnos-regular-record/alumnos-regular-record.component";
+import { ExamenesListComponent } from "./pages/examenes/examenes-list/examenes-list.component";
+import { ExamenesExamVoucherComponent } from "./pages/examenes/examenes-exam-voucher/examenes-exam-voucher.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
   { path: "login", component: LogInComponent },
+  /** Pantallas Principales **/
   { path: "home", component: HomeComponent, canActivate: [AuthGuard] },
   { path: "admin", component: AdminComponent, canActivate: [AuthGuard] },
+  /** Alumnos **/
   { path: "alumnos", component: AlumnosListComponent, canActivate: [AuthGuard] },
   { path: "alumnos/:id", component: AlumnoDetailComponent, canActivate: [AuthGuard] },
   { path: "alumnos/create/new", component: AlumnoAddComponent, canActivate: [AuthGuard] },
   { path: "alumnos/edit/:id", component: AlumnoEditComponent, canActivate: [AuthGuard] },
+  { path: "alumnos/regular-certificate/:id", component: AlumnosRegularRecordComponent, canActivate: [AuthGuard] },
+   /** Docentes **/
   { path: "docentes", component: DocentesListComponent, canActivate: [AuthGuard] },
   { path: "docentes/:id", component: DocenteDetailComponent, canActivate: [AuthGuard] },
   { path: "docentes/create/new", component: DocenteAddComponent, canActivate: [AuthGuard] },
   { path: "docentes/edit/:id", component: DocenteEditComponent, canActivate: [AuthGuard] },
+   /** Asignaturas **/
   { path: "asignaturas", component: AsignaturasListComponent, canActivate: [AuthGuard] },
   { path: "asignaturas/create/new", component: AsignaturasAddComponent, canActivate: [AuthGuard] },
   { path: "asignaturas/edit/:id", component: AsignaturasEditComponent, canActivate: [AuthGuard] },
+  { path: "asignaturas/correlatives", component: AsignaturasCorrelativesComponent, canActivate: [AuthGuard] },
+   /** Finales **/
   { path: "finales", component: FinalesListComponent, canActivate: [AuthGuard] },
+   /** Examenes **/
+   { path: "examenes", component: ExamenesListComponent, canActivate: [AuthGuard] },
+   { path: "examenes/examen-voucher/:id", component: ExamenesExamVoucherComponent, canActivate: [AuthGuard] },
+
   { path: "**", component: PageNotFoundComponent },
 ];
 

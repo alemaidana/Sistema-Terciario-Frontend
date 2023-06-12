@@ -15,6 +15,7 @@ import { AlumnosListComponent } from '../../alumnos-list/alumnos.component';
 import { FormAlumnoAddAndEditComponent } from '../../components/form-alumno-add-and-edit/form-alumno-add-and-edit.component';
 import { SingleUserProfileComponent } from '../../components/single-user-profile/single-user-profile.component';
 import { AlumnosNavBarComponent } from '../../components/alumnos-nav-bar/alumnos-nav-bar.component';
+import { AlumnosRegularRecordComponent } from '../../alumnos-regular-record/alumnos-regular-record.component';
 
 //** Pipes **/
 import { GetAlumnoFullNamePipe } from '../../pipes/get-full-name.pipe';
@@ -32,6 +33,7 @@ import { AddTokenInterceptor } from 'src/app/utils/add-token.interceptor';
     FormAlumnoAddAndEditComponent,
     AlumnoAddComponent,
     AlumnoEditComponent,
+    AlumnosRegularRecordComponent,
     SingleUserProfileComponent,
     AlumnosNavBarComponent,
     GetAlumnoFullNamePipe,

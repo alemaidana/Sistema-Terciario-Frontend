@@ -1,0 +1,51 @@
+<div class="container py-5">
+  <h1 class="text-center mb-5" style="font-size: 18px;">CONSTANCIA DE ASISTENCIA A EXÁMENES</h1>
+  <div class="card p-5">
+      <div class="row mt-5">
+        <!-- Encabezado -->
+        <div class="col-lg-7 col-md-7 col-sm-8">
+        <img class="img-fluid" src="logo-ba.png">
+      </div>
+        <div class="col-lg-5 col-md-5 col-sm-4"><h2 style="font-size: 12px; font-weight: bold;">
+          DIRECCIÓN GENERAL DE CULTURA Y EDUCACIÓN
+          </h2>
+        <h2 style="font-size: 12px; font-weight: bold;">
+          <span style="border-bottom: 1px solid #000;">DIRECCIÓN DE EDUCACIÓN SUPERIOR DE FORMACIÓN TÉCNICA</span>
+          </h2>
+        <h3 style="font-size: 12px; font-weight: bold;">
+          INSTITUTO SUPERIOR DE FORMACIÓN TÉCNICA Nº 220 - AMET
+        </h3>
+        </div>
+      </div>
+    <!-- Fin Encabezado -->
+        <div class="row mt-5">
+          <h1 class="text-center pb-5" style="font-size: 16px; font-weight: bold;">
+            CONSTANCIA DE ASISTENCIA A EXÁMENES
+          </h1>
+          <p class="text-center">
+            Se deja constancia de que a el/la el alumno/a {{ alumno?.nombre }} {{ alumno?.apellido }} DNI Nº {{ alumno?.dni }} 
+            ha asistido en el día de la fecha a rendir los exámen Parcial correspondiente a la asignatura 
+            NOMBRE MATERIA de {{ alumno?.carreraId }} (Res 4344/19), curso {{ alumno?.curso }} año. </p>
+          <p class="text-center">
+            A pedido de la interesada y para ser presentada ante quien corresponda, se extiende la presente en la ciudad de Vicente López a los 03 días del mes de Abril de 2023.
+          </p>
+        </div>
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <p class="text-center">
+          Sello del establecimiento
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <p class="text-center">
+          Firma y sello de autoridad
+        </p>
+      </div>
+    </div>
+    </div> <!-- Fin Card -->
+  </div>
+<div class="d-grid gap-2 col-4 mx-auto my-3">
+      <button class="btn btn-primary" type="button" routerLink="{{ returnLink }}">
+        Volver
+      </button>
+</div>

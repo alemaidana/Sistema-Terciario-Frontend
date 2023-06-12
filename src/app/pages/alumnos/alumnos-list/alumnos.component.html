@@ -16,6 +16,7 @@
           <th>Nombre</th>
           <th>Carrera</th>
           <th>Condicion</th>
+          <th>Generar</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -25,7 +26,7 @@
             <div class="d-flex align-items-center">
               <a routerLink="/alumnos/{{ alumno.id }}">
                 <img
-                  src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                  src="../../../../../assets/images/single-user.png"
                   alt=""
                   style="width: 45px; height: 45px"
                   class="rounded-circle"
@@ -50,6 +51,15 @@
             >
               {{ alumno | getEstado }}
             </span>
+          </td>
+          <td>
+            <div class="d-grid gap-2 d-md-block">
+              <button                 
+              type="button"
+              [routerLink]="['regular-certificate', alumno.id]"
+              class="btn btn-info btn-sm rounded"
+              >Constancia Regular</button>
+            </div>
           </td>
           <td>
             <div class="d-grid gap-2 d-md-block">
