@@ -15,11 +15,13 @@ import { ExamenesExamVoucherComponent } from '../../examenes-exam-voucher/examen
 import { ExamenesListComponent } from '../../examenes-list/examenes-list.component';
 
 //** Pipes **/
+import { GetAlumnoPipe } from '../../pipes/get-alumno.pipe';
+import { GetFinalAsignaturaPipe } from '../../pipes/get-final-asignatura.pipe';
+import { GetPrimerLLamadoPipe } from '../../pipes/get-primer-llamado.pipe';
+import { GetSegundoLLamadoPipe } from '../../pipes/get-segundo-llamado.pipe';
 
 //** Interceptor **/
 import { AddTokenInterceptor } from 'src/app/utils/add-token.interceptor';
-
-
 
 @NgModule({
   declarations: [
@@ -28,6 +30,10 @@ import { AddTokenInterceptor } from 'src/app/utils/add-token.interceptor';
     ExamenesEditComponent,
     ExamenesDetailComponent,
     ExamenesExamVoucherComponent,
+    GetAlumnoPipe,
+    GetFinalAsignaturaPipe,
+    GetPrimerLLamadoPipe,
+    GetSegundoLLamadoPipe,
   ],
   imports: [
     CommonModule,

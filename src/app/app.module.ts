@@ -8,6 +8,7 @@ import { AlumnoModule } from './pages/alumnos/modules/alumno/alumno.module';
 import { DocenteModule } from './pages/docentes/modules/docente/docente.module';
 import { AsignaturaModule } from './pages/asignaturas/modules/asignatura/asignatura.module';
 import { FinalesModule } from './pages/finales/modules/finales/finales.module';
+import { ExamenesModule } from './pages/examenes/modules/examenes/examenes.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -21,7 +22,6 @@ import { SingleLinkCardComponent } from './shared/components/single-link-card/si
 
 //** Interceptor **/
 import { AddTokenInterceptor } from './utils/add-token.interceptor';
-import { ExamenesModule } from './pages/examenes/modules/examenes/examenes.module';
 
 @NgModule({
   declarations: [

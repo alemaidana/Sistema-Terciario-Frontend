@@ -1,1 +1,56 @@
-<p>examenes-list works!</p>
+<div class="container">
+    <h1 class="text-center mb-5 display-1">Examenes</h1>
+ 
+    <ng-container *ngIf="listaExamenes; else noExamen">
+ 
+ 
+        <section>
+            <div class="text-center container py-5">
+ 
+              <div class="row">
+ 
+                <div class="col-lg-4 col-md-12 mb-4" *ngFor="let examen of listaExamenes">
+                  <div class="card">
+                    <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                      data-mdb-ripple-color="light">
+                      <img src="../../../../assets/images/single-user.png"
+                        class="w-100" />
+                      <a href="#!">
+                        <div class="mask">
+                          <div class="d-flex justify-content-start align-items-end h-100">
+                            <h5><span class="badge bg-success ms-2">Inscripto</span></h5>
+                          </div>
+                        </div>
+                        <div class="hover-overlay">
+                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card-body"> 
+                        <h5  *ngFor="let alumno of listaAlumnos" class="card-title mb-3" > 
+                        {{ examen | getAlumno : alumno }}</h5>
+                        <ng-container class="mb-3" 
+                            *ngFor="let final of listaFinales">
+                            <ng-container *ngFor="let asignatura of listaAsignaturas"> 
+                               <h5 *ngFor="let materia of listaMaterias">  
+                                {{ examen | getFinalAsignatura : final : asignatura : materia }} 
+                               </h5>
+                            </ng-container>
+                            <h5> {{ examen | getPrimerLLamado : final }}</h5>
+                            <h5> {{ examen | getSegundoLLamado : final }}</h5>
+                        </ng-container>
+                    </div>
+                  </div>
+                </div>
+ 
+              </div>
+ 
+            </div>
+          </section>
+ 
+    </ng-container>
+ 
+    <ng-template #noExamen>
+      <h1>No hay Examenes para mostrar. Intentelo mas tarde</h1>
+    </ng-template>
+  </div>
