@@ -44,7 +44,18 @@
                           <h5><strong>Segundo LLamado:</strong></h5>
                           <h4>{{ final.segundo_llamado | date }}</h4>
  
-                          <button class="btn btn-primary rounded btn-lg mt-2">Ver mas</button>
+                          <div class="p-2">
+                            <button class="btn btn-primary rounded mt-2 mx-2">Detalles</button>
+                            <button 
+                            class="btn btn-warning rounded mt-2 mx-2"
+                            routerLink="/finales/edit/{{ final.id }}"
+                            >Editar</button>
+                            <button 
+                            class="btn btn-primary rounded mt-2 mx-2"
+                            (click)="deleteFinal(final.id!)"
+                            >Borrar</button>
+
+                          </div>
                   </div>
                 </div>
               </div>

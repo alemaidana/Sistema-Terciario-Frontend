@@ -11,8 +11,8 @@ export class GetNombreAsignaturaPipe implements PipeTransform {
 
   transform(materia: Materia, asignatura:Asignatura): unknown {
     
-    return materia.id == asignatura.id 
-    ? `${materia.nombre} ${materia.curso}`
+    return materia.id == asignatura.subjectId 
+    ? `${materia.nombre} : ${materia.curso} Año`
     : null;
   }
 

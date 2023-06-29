@@ -24,6 +24,8 @@ import { AsignaturasCorrelativesComponent } from "./pages/asignaturas/asignatura
 import { AlumnosRegularRecordComponent } from "./pages/alumnos/alumnos-regular-record/alumnos-regular-record.component";
 import { ExamenesListComponent } from "./pages/examenes/examenes-list/examenes-list.component";
 import { ExamenesExamVoucherComponent } from "./pages/examenes/examenes-exam-voucher/examenes-exam-voucher.component";
+import { FinalesAddComponent } from "./pages/finales/finales-add/finales-add.component";
+import { FinalesEditComponent } from "./pages/finales/finales-edit/finales-edit.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
@@ -49,6 +51,8 @@ const routes: Routes = [
   { path: "asignaturas/correlatives", component: AsignaturasCorrelativesComponent, canActivate: [AuthGuard] },
    /** Finales **/
   { path: "finales", component: FinalesListComponent, canActivate: [AuthGuard] },
+  { path: "finales/create/new", component: FinalesAddComponent, canActivate: [AuthGuard] },
+  { path: "finales/edit/:id", component: FinalesEditComponent, canActivate: [AuthGuard] },
    /** Examenes **/
    { path: "examenes", component: ExamenesListComponent, canActivate: [AuthGuard] },
    { path: "examenes/examen-voucher/:id", component: ExamenesExamVoucherComponent, canActivate: [AuthGuard] },
