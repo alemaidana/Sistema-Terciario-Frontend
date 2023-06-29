@@ -15,7 +15,7 @@ import { FinalesDetailComponent } from '../../finales-detail/finales-detail.comp
 
 //** Pipes **/
 import { GetCarreraPipe } from '../../pipes/get-carrera.pipe';
-import { GetCorreoDocentePipe } from '../../pipes/get-correo-docente.pipe';
+import { GetNombreAsignaturaPipe } from '../../pipes/get-nombre-asignatura.pipe';
 import { GetMatriculaDocentePipe } from '../../pipes/get-matricula-docente.pipe';
 import { GetNombreDocentePipe } from '../../pipes/get-nombre-docente.pipe';
 import { GetMateriaPipe } from '../../pipes/get-materia.pipe';
@@ -32,7 +32,7 @@ import { AddTokenInterceptor } from 'src/app/utils/add-token.interceptor';
     FinalesDetailComponent,
     GetNombreDocentePipe,
     GetMatriculaDocentePipe,
-    GetCorreoDocentePipe,
+    GetNombreAsignaturaPipe,
     GetCarreraPipe,
     GetMateriaPipe,
   ],

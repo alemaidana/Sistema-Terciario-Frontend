@@ -1,6 +1,6 @@
 export interface Final {
     id?: number;
     asignaturaId: number;
-    primer_llamado: string;
-    segundo_llamado: number;
+    primer_llamado: Date;
+    segundo_llamado: Date;
 }

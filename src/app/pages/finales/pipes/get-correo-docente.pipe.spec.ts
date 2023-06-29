@@ -1,8 +1,8 @@
-import { GetCorreoDocentePipe } from './get-correo-docente.pipe';
+import { GetNombreAsignaturaPipe } from './get-nombre-asignatura.pipe';
 
-describe('GetCorreoDocentePipe', () => {
+describe('GetNombreAsignaturaPipe', () => {
   it('create an instance', () => {
-    const pipe = new GetCorreoDocentePipe();
+    const pipe = new GetNombreAsignaturaPipe();
     expect(pipe).toBeTruthy();
   });
 });
