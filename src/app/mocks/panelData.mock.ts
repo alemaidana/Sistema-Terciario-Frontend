@@ -15,8 +15,6 @@ export const adminPanel: cardData[] = [
     {title: 'Asignaturas', icon: 'bi bi-bookmark-star', link: '/asignaturas'},
     {title: 'Finales', icon: 'bi bi-journal-check', link: '/finales'},
     {title: 'Examenes', icon: 'bi bi-blockquote-right', link: '/examenes'},
-    {title: 'Asistencias', icon: 'bi bi-check-square', link: ''},
-    {title: 'Calificaciones', icon: 'bi bi-file-earmark-richtext', link: ''},
-    {title: 'Configuracion', icon: 'bi bi-pc-display-horizontal', link: ''},
+    {title: 'Salir', icon: 'bi bi-pc-display-horizontal', link: '/logout'},
 ]
 

@@ -1,10 +1,24 @@
 <div class="container">
+    <!-- Titulo -->
     <h1 class="text-center mb-5 display-1">Examenes</h1>
  
+
+    <!-- Boton para volver -->
+    <div class="d-flex mb-3">
+      <div class="p-2">
+        <button
+          class="btn btn-primary btn-md rounded"
+          type="button"
+          routerLink="/alumnos"
+        >
+          <i class="bi bi-arrow-left-circle"></i>
+        </button>
+      </div>
+    </div>
+
     <ng-container *ngIf="listaExamenes; else noExamen">
  
- 
-        <section>
+      <section>
             <div class="text-center container py-5">
  
               <div class="row">
@@ -28,7 +42,14 @@
                     </div>
                     <div class="card-body"> 
                         <h5  *ngFor="let alumno of listaAlumnos" class="card-title mb-3" > 
-                        {{ examen | getAlumno : alumno }}</h5>
+                        {{ examen | getAlumno : alumno }}                      
+                        <button class="btn btn-secondary mb-2"
+                        type="button"
+                        routerLink="examenes/examen-voucher/{{ alumno.id }}">
+                        generar constancia  
+                        </button>
+                        </h5>
+
                         <ng-container class="mb-3" 
                             *ngFor="let final of listaFinales">
                             <ng-container *ngFor="let asignatura of listaAsignaturas"> 

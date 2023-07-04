@@ -1,6 +1,29 @@
 <div class="container">
-  <h1 class="text-center mb-5 display-1">Examenes</h1>
+  <h1 class="text-center mb-5 display-1">Mesa de examen</h1>
  
+  <div class="d-flex mb-3">
+    <div class="p-2">
+      <button
+        class="btn btn-primary btn-md rounded"
+        type="button"
+        routerLink="/admin"
+      >
+        <i class="bi bi-arrow-left-circle"></i>
+      </button>
+    </div>
+      
+    <div class="ms-auto p-2">
+      <button
+        type="button"
+        class="btn btn-success btn-md rounded"
+        routerLink="/create/new"
+      >
+        <i class="bi bi-database-fill-add"><span class="p-2">Agregar</span></i>
+      </button>
+    </div>
+  </div>
+
+
   <ng-container *ngIf="listaFinales; else noExamen">
  
       <section>
